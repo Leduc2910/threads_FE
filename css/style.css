@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+#login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    z-index: -1;
+}
+.login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 929px;
+
+}
+#title_form {
+    margin-top: 110px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.account_input {
+    height: 55px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    width: 370px;
+}
+.login_button {
+    height: 55px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    width: 370px;
+    margin-bottom: 25px;
+}
+.horizon-rule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.horizon-rule hr {
+    height: 1px;
+    width: 133px;
+    color: gray;
+}
+.horizon-rule span {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 20px;
+    color: #9f9f9f;
+}
+.second_button {
+    height: 55px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 600;
+    width: 250px;
+}
+#footer {
+    width: 560px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+.year {
+    font-size: 13px;
+    color: #9f9f9f;
+}
+.terms, .privacy, .cookie, .report {
+    text-decoration: none;
+    font-size: 13px;
+    color: #9f9f9f;
+}
+.terms:hover, .privacy:hover, .cookie:hover, .report:hover {
+    text-decoration: underline;
+    color: #9f9f9f;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1230px;
+    height: 74px;
+}
