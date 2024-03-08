@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 #login {
     display: flex;
     justify-content: center;
@@ -115,7 +119,7 @@
 
 .header {
     position: fixed;
-    top :0;
+    top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -124,6 +128,8 @@
     flex-direction: row;
     justify-content: center;
     height: 74px;
+    background-color: white;
+    z-index: 2;
 }
 
 .logo {
@@ -133,9 +139,11 @@
     align-items: center;
     width: 30%;
 }
+
 .logo svg {
     margin-left: 19px;
 }
+
 .my-navbar {
     width: 40%;
     display: flex;
@@ -143,13 +151,15 @@
     align-items: center;
     justify-content: space-between;
 }
-.fun-home, .fun-search,.fun-new, .fun-activity, .fun-profile {
+
+.fun-home, .fun-search, .fun-new, .fun-activity, .fun-profile {
     height: 100%;
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .my-navbar button {
     background-color: transparent;
     border: none;
@@ -157,27 +167,33 @@
     height: 90%;
     margin: 0 5px;
 }
+
 .my-navbar button:hover {
     background-color: #f5f5f5;
     border-radius: 10px;
 }
+
 .my-navbar i {
     font-size: 24px;
     color: #b8b8b8;
 }
+
 .option {
     width: 30%;
 }
+
 .button_option {
     display: flex;
     justify-content: right;
     align-items: center;
     height: 100%;
 }
+
 .button_option button {
     background-color: transparent;
     border: none;
 }
+
 .button_option button i {
     font-size: 24px;
     color: #b8b8b8;
@@ -197,11 +213,13 @@
     visibility: hidden;
     transition: transform 0.2s, right 0.2s;
 }
+
 .open_popup {
     visibility: visible;
     right: 0;
     transform: scale(1);
 }
+
 .popup_option button {
     width: 100%;
     height: 46px;
@@ -213,20 +231,25 @@
     margin-bottom: 2px;
     font-size: 15px;
 }
+
 .mode button {
     border-radius: 10px 10px 0 0;
 }
+
 .logout button {
     border-radius: 0 0 10px 10px;
 }
+
 .main-content {
-    height: 1000px;
+    height: auto;
 }
+
 .change-content {
     position: fixed;
     bottom: 35px;
     left: 350px;
 }
+
 .change-content button {
     width: 167px;
     height: 54px;
@@ -237,8 +260,445 @@
     font-weight: 500;
     font-size: 15px;
 }
+
 .change-content i {
     margin-left: 5px;
     color: #b8b8b8;
 }
 
+.main-content {
+    margin: 90px 35% 0 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-status img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.new-status input {
+    border: none;
+    background-color: transparent;
+    width: 450px;
+    margin-right: 10px;
+}
+
+.new-status input:focus-visible {
+    outline: none;
+}
+
+.new-status button {
+    background-color: #b2b2b2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 36px;
+    width: 68px;
+}
+
+.contain-thread {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.thread {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contain_avatar {
+    width: 8%;
+    position: relative;
+}
+
+.contain_avatar img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.contain_content {
+    width: 91%;
+}
+
+.content_top {
+    width: 100%;
+    display: flex;
+}
+
+.username_top {
+    width: 85%;
+}
+
+.username_top a {
+    color: black;
+    font-weight: 600;
+}
+
+.username_top a:hover {
+    text-underline: black;
+    color: black;
+}
+
+.time {
+    width: 13%;
+}
+
+.time span {
+    color: #b8b8b8;
+}
+
+.content_middle {
+    width: 100%;
+
+}
+
+.content_text {
+    width: 100%;
+}
+
+.content_text span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.content_image {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.content_image img {
+    max-width: 100%;
+    max-height: 430px;
+    border-radius: 10px;
+}
+
+.content_function {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: -7px;
+}
+
+.content_function button {
+    background-color: transparent;
+    border: none;
+    height: 36px;
+    width: 36px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.content_function button:hover {
+    background-color: #eeeeee;
+    border-radius: 50%;
+}
+
+.content_function i {
+    font-size: 20px;
+}
+
+.content_activity {
+    margin-top: 7px;
+    width: 100%;
+}
+
+.content_activity span {
+    color: #b8b8b8;
+}
+
+.modal_create {
+    width: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.5);
+    top: 0;
+    height: 929px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.open_modal_create {
+    visibility: visible;
+}
+
+.turn-off-scroll {
+    overflow: hidden;
+}
+
+.new_thread {
+    position: fixed;
+    width: 618px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.create_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.create_title span {
+    color: white;
+    font-weight: 700;
+}
+
+.frame_create {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    padding: 20px 20px;
+    border-radius: 15px;
+}
+
+.create_top {
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    flex-direction: row;
+}
+
+.create_topleft {
+    width: 8%;
+    padding-top: 5px;
+}
+
+.create_topleft img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.create_topright {
+    width: 92%;
+    height: 100%;
+}
+
+.create_username {
+    width: 100%;
+}
+
+.create_username span {
+    font-weight: 500;
+}
+
+.create_content {
+    width: 100%;
+}
+
+.editable {
+    color: black;
+    cursor: text;
+    margin-bottom: 10px;
+}
+
+.editable[contenteditable]:empty::before {
+    content: "Bắt đầu thread";
+    color: gray;
+}
+
+.editable:focus-visible {
+    outline: none;
+}
+
+.create_content input:focus-visible {
+    outline: none;
+}
+
+.create_img {
+    margin-bottom: 10px;
+}
+
+.create_img img {
+    max-width: 100%;
+    max-height: 430px;
+    border-radius: 10px;
+}
+
+.create_fun {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fun_img {
+    margin-right: 10px;
+}
+
+#file-upload {
+    display: none;
+}
+
+.custom-file-upload i {
+    color: #868686;
+}
+
+.fun_img button {
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fun_img button i {
+    font-size: 18px;
+    color: #b8b8b8;
+}
+
+.create_bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.create_bottomleft {
+    width: 80%;
+}
+
+.create_bottomleft span {
+    color: #a4a4a4;
+    font-size: 16px;
+}
+
+.create_bottomright {
+    width: 20%;
+    display: flex;
+    justify-content: right;
+}
+
+.create_bottomright button {
+    background-color: #b2b2b2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 36px;
+    width: 68px;
+}
+
+.detail-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-left {
+    width: calc(100% - 84px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-name span {
+    font-weight: bold;
+    font-size: 24px
+}
+
+.detail-username span {
+    font-size: 15px
+}
+
+.detail-right {
+    width: 84px;
+}
+
+.detail-right img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+
+.detail-middle {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.detail-middle span {
+    font-size: 15px;
+}
+
+.detail-bot {
+    width: 100%;
+    margin-top: 17px;
+}
+
+.detail-bot span {
+    color: #9a9a9a;
+    font-size: 15px;
+}
+
+.detail-bot span:hover {
+    color: #9a9a9a;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.setting-profile {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.setting-profile button {
+    height: 34px;
+    background-color: white;
+    border: 1px solid #d2d1d1;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.title-thread {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.my-thread, .my-comment, .my-rethread {
+    width: calc(100% / 3);
+    height: 48px;
+    border-bottom: 1px solid #b8b8b8;
+}
+
+.title-thread button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: #9f9f9f;
+}

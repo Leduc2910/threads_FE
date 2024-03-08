@@ -2,7 +2,7 @@ function showLoginPage() {
     if(localStorage.getItem("currentUser") != null) {
         showHome();
     } else {
-        let html = `    <div id="login">
+        let html = `<div id="login">
         <img id="banner" src="elements/banner_login.png" width="1785px" height="510px"/>
         <div class="login_form">
             <span id="title_form">Đăng nhập bằng tài khoản i gờ</span>
