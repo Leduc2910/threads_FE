@@ -1,12 +1,8 @@
 let pop_up = document.getElementById("popup_option");
 let pop_up_button = document.getElementById("popup_button");
 document.addEventListener("click", function (event) {
-
-    // Kiểm tra xem sự kiện click có xuất phát từ popup hay không
     let isClickInsidePopup = pop_up.contains(event.target);
     let isClickButton = pop_up_button.contains(event.target);
-
-    // Nếu không phải là click bên trong popup, đóng popup
     if (!isClickInsidePopup && !isClickButton) {
         closePopup();
     }
@@ -18,6 +14,18 @@ function openPopup() {
 
 function closePopup() {
     pop_up.classList.remove("open_popup");
+}
+
+
+
+function openSettingPopup() {
+    let setting_popup = document.getElementById('popup_setting_thread');
+    if (setting_popup.classList.contains('open_popup_setting_thread')) {
+        setting_popup.classList.remove("open_popup_setting_thread");
+    } else {
+        setting_popup.classList.add("open_popup_setting_thread");
+    }
+
 }
 
 const modalElement = document.getElementById("modal_create");
@@ -43,9 +51,41 @@ function closeModal() {
     }
     modalElement.classList.remove("open_modal_create")
     document.body.classList.remove("turn-off-scroll");
-    document.getElementById('postThread').style.backgroundColor= '#b2b2b2';
-    document.getElementById('postThread').disabled= true;
+    document.getElementById('postThread').style.backgroundColor = '#b2b2b2';
+    document.getElementById('postThread').disabled = true;
 }
+
+const modalFollow = document.getElementById("modal_follow");
+
+function openFollowModal() {
+    modalFollow.classList.add("open_modal_follow")
+    document.body.classList.add("turn-off-scroll");
+}
+
+function closeFollowModal() {
+    modalFollow.classList.remove("open_modal_follow")
+    document.body.classList.remove("turn-off-scroll");
+}
+
+const modalReply = document.getElementById("modal_reply");
+let currentThreadID;
+
+function openReplyModal(threadId) {
+    currentThreadID = threadId;
+    modalReply.classList.add("open_modal_reply")
+    document.body.classList.add("turn-off-scroll");
+}
+
+function closeReplyModal() {
+    currentThreadID = null;
+    document.getElementById('editComment').innerHTML = '';
+    modalReply.classList.remove("open_modal_reply");
+    document.body.classList.remove("turn-off-scroll");
+    document.getElementById('postComment').style.backgroundColor = '#b2b2b2';
+    document.getElementById('postComment').disabled = true;
+}
+
+let preProfile;
 
 function getTimeDiff(createTime) {
     let currentTime = new Date().getTime();
@@ -63,13 +103,4 @@ function getTimeDiff(createTime) {
     }
 }
 
-// document.addEventListener("click", function (event) {
-//
-//     // Kiểm tra xem sự kiện click có xuất phát từ popup hay không
-//     let isClickInsideModal = modal_create.contains(event.target);
-//
-//     // Nếu không phải là click bên trong popup, đóng popup
-//     if (!isClickInsidePopup) {
-//         modal_create.classList.remove("modal_create_open");
-//     }
-// });
+

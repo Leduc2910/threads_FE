@@ -240,10 +240,6 @@ body {
     border-radius: 0 0 10px 10px;
 }
 
-.main-content {
-    height: auto;
-}
-
 .change-content {
     position: fixed;
     bottom: 35px;
@@ -270,6 +266,7 @@ body {
     margin: 90px 35% 0 35%;
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .new-status {
@@ -312,6 +309,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .thread {
@@ -338,19 +336,22 @@ body {
 .content_top {
     width: 100%;
     display: flex;
+    position: relative;
 }
 
 .username_top {
     width: 85%;
 }
 
-.username_top a {
+.username_top button {
     color: black;
     font-weight: 600;
+    background-color: white;
+    border: none;
 }
 
-.username_top a:hover {
-    text-underline: black;
+.username_top button:hover {
+    text-decoration: underline;
     color: black;
 }
 
@@ -669,10 +670,20 @@ body {
     margin-top: 28px;
 }
 
-.setting-profile button {
+.setting-profile .button_setting {
     height: 34px;
     background-color: white;
     border: 1px solid #d2d1d1;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.button_follow {
+    height: 34px;
+    background-color: black;
+    color: white;
     width: 100%;
     border-radius: 10px;
     font-weight: 500;
@@ -701,4 +712,406 @@ body {
     font-weight: 500;
     font-size: 15px;
     color: #9f9f9f;
+}
+
+.modal_follow {
+    width: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.5);
+    top: 0;
+    height: 929px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.open_modal_follow {
+    visibility: visible;
+}
+
+.frame_follow {
+    position: fixed;
+    width: 520px;
+    max-height: 865px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.follow_top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.follower, .following {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #9f9f9f;
+    height: 60px;
+}
+
+.count_follower, .count_following {
+    color: #9f9f9f;
+    font-size: 14px;
+}
+
+.title_follower, .title_following {
+    font-weight: 500;
+    color: #9f9f9f;
+}
+
+.follow_middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 62px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+}
+
+.no_follow {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no_follow span {
+    color: #9f9f9f;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.follow-user {
+    width: 100%;
+    padding: 16px 0 0 16px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+}
+
+.follow-left {
+    width: 48px;
+}
+
+.follow-left img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.follow-right {
+    width: calc(100% - 48px);
+    padding-right: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #cecece;
+}
+
+.follow-username span {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.follow-button button {
+    background-color: white;
+    border: 1px solid #9f9f9f;
+    color: black;
+    border-radius: 10px;
+    width: 115px;
+    height: 34px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.following-button button {
+    background-color: white;
+    border: 1px solid #9f9f9f;
+    color: #9f9f9f;
+    border-radius: 10px;
+    width: 115px;
+    height: 34px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.follow-close {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    right: 10px;
+    top: 5px;
+}
+
+.contain-comment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.modal_reply {
+    width: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.5);
+    top: 0;
+    height: 929px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.open_modal_reply {
+    visibility: visible;
+}
+
+.new_comment {
+    position: fixed;
+    width: 618px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reply_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.reply_title span {
+    color: white;
+    font-weight: 700;
+}
+
+.frame_reply {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    padding: 20px 20px;
+    border-radius: 15px;
+}
+
+.reply_top {
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    flex-direction: row;
+}
+
+.reply_topleft {
+    width: 8%;
+    padding-top: 5px;
+}
+
+.reply_topleft img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.reply_topright {
+    width: 92%;
+    height: 100%;
+}
+
+.reply_username {
+    width: 100%;
+}
+
+.reply_username span {
+    font-weight: 500;
+}
+
+.reply_content {
+    width: 100%;
+}
+
+.editable {
+    color: black;
+    cursor: text;
+    margin-bottom: 10px;
+}
+
+.editable[contenteditable]:empty::before {
+    content: "Trả lời...";
+    color: gray;
+}
+
+.editable:focus-visible {
+    outline: none;
+}
+
+.reply_content input:focus-visible {
+    outline: none;
+}
+
+.reply_bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reply_bottomleft {
+    width: 80%;
+}
+
+.reply_bottomleft span {
+    color: #a4a4a4;
+    font-size: 16px;
+}
+
+.reply_bottomright {
+    width: 20%;
+    display: flex;
+    justify-content: right;
+}
+
+.reply_bottomright button {
+    background-color: #b2b2b2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 36px;
+    width: 68px;
+}
+.reply-close {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    right: 10px;
+    top: 50px;
+}
+.popup_setting_thread {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background-color: #e7e7e7;
+    box-shadow: 2px 2px 10px 1px #dcdcdc;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.open_popup_setting_thread {
+    visibility: visible;
+}
+.popup_setting_thread button {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: left;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: white;
+    border: none;
+    margin-bottom: 1px;
+}
+.contain_search {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    padding: 20px 20px;
+}
+.contain_search i {
+    color: #d9d9d9;
+    margin-right: 15px;
+}
+.contain_search input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+.contain_search input:focus-visible {
+    outline: none;
+}
+.contain_search:focus-within {
+    box-shadow: 2px 2px 10px 1px #eeeeee;
+}
+.contain_result {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+.result_user {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+.result_avatar {
+    width: 9%;
+}
+.result_avatar img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.result_right {
+    width: calc(100% - 9%);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #b8b8b8;
+}
+.result_top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.result_info {
+    width: 75%;
+}
+.result_username span {
+    font-weight: 500;
+    font-size: 15px;
+}
+.result_name span {
+    font-size: 15px;
+    color: #9f9f9f;
+}
+.result_button button {
+    height: 36px;
+    padding: 0 5px;
+    min-width: 104px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+}
+.result_bottom {
+    padding-bottom: 10px;
+}
+.result_bottom span {
+    font-size: 15px;
+}
+.hidden_button {
+    visibility: hidden;
 }
